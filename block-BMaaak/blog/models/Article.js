@@ -7,6 +7,7 @@ var articleSchema = new Schema ({
     tags: [ String ]
 });
 
-articleSchema.index({ sports: 1 }, { title: "text" }, { description: "text" });
+articleSchema.index({ tags: 1 } );
+articleSchema.index({ title: "text" }, { description: "text" });
 
 module.exports = mongoose.model('User', userSchema);
